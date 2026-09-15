@@ -30,10 +30,10 @@ class PepParsePipeline:
 
         with open(filename, 'w', encoding='utf-8', newline='') as file:
             writer = csv.writer(file)
-            rows = (
-                [('Статус', 'Количество')]
-                + list(self.statuses.items())
-                + [('Total', total)]
-            )
+            rows = [
+                ('Статус', 'Количество'),
+                *self.statuses.items(),
+                ('Total', total),
+            ]
 
             writer.writerows(rows)

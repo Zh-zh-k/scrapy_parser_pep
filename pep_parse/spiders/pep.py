@@ -2,7 +2,6 @@ import scrapy
 
 from pep_parse.items import PepParseItem
 
-
 PEP_BASE_URL = 'https://peps.python.org/'
 
 
